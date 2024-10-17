@@ -16,14 +16,66 @@ html, body {
 
 .hero-container{
 
+  
+  background-image: url('/hero-main-image.png');
   background-color: black;
   width: 1440px;
-  height: auto;
+  height: 3472px
+  ;
+  background-repeat: no-repeat;
+ 
+ 
 }
 
 .nav-border{
   border-radius: 10px;
 border: 1px solid rgba(255, 215, 0, 1) ;
-  
+
+}
+.nav-border-2{
+  border-radius: 10px;
+border: 1px solid rgba(255, 215, 0, 1) ;
+
 }
 
+
+/* Mobile responsive Query */
+
+@media (max-width: 500px) {
+
+  .nav-border{
+    margin: 20px;
+   border-radius: 0%;
+   border-top-left-radius: 40px;
+border-bottom-right-radius: 40px;
+   
+
+  } 
+
+  .nft-res{
+    position: relative;
+    top: 120px;
+    right: 15px;
+
+  }
+.carousel-res {
+  position: relative;
+  top: 150px;
+right: 250px;
+
+}
+.sold-res {
+
+  position: relative;
+  left: 250px;
+  padding: 10px;
+}
+.hero-border-b{
+  position: relative;
+  top: 250px;
+  right: 50px;
+
+
+}
+
+}
