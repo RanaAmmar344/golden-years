@@ -2,6 +2,7 @@
 import { CAROUSEL_HERO } from '@/constants'; 
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+import OurMission from './OurMission';
 
 const Hero = () => {
    const [currentIndex, setCurrentIndex] = useState(0);
@@ -70,6 +71,7 @@ const Hero = () => {
             </div>
 
           </div>
+          
          </div>
        
         

@@ -20,12 +20,13 @@ html, body {
   background-image: url('/hero-main-image.png');
   background-color: black;
   width: 1440px;
-  height: 3472px
+  height: auto
   ;
   background-repeat: no-repeat;
  
  
 }
+
 
 .nav-border{
   border-radius: 10px;
@@ -74,6 +75,12 @@ right: 250px;
   position: relative;
   top: 250px;
   right: 50px;
+
+
+}
+.ourmisson-res{
+  position: relative;
+  top: 300px;
 
 
 }
