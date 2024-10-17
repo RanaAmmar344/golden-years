@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import image1 from '../../public/misson-1.png'
-import image4 from '../../public/mission-4.png'
 import image5 from '../../public/mission-5.png'
 
 
@@ -46,7 +45,7 @@ const OurMission = () => {
            />
            <Image
            className=' lg:w-[154.33px] lg:h-[184.34px] relative bottom-[150px] w-[89.95px] h-[106.45px]'
-           src={image4}
+           src='/mission-4.png'
            width={154.33}
            height={184.34}
            alt=''
