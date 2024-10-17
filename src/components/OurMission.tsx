@@ -59,7 +59,7 @@ const OurMission = () => {
            alt=''
            />
           </div>
-          <div className=' circlePosition w-[900px] h-[509px] bg-[rgba(255,188,0,1)] rounded-[100%] relative bottom-20 left-[600px]  translate-x-[-50%] translate-y-[50%] blur-[250px] '>
+          <div className=' circlePosition w-[900px] h-[509px] bg-[rgba(255,188,0,1)] rounded-[100%] relative bottom-28 left-[600px]  translate-x-[-50%] translate-y-[50%] blur-[250px] '>
 
 
           </div>
