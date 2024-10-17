@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <div className='w-full mx-auto flex items-center justify-center '>
             <nav className='fixed top-2 z-50 lg:w-[1160px] w-full '>
-                <div className='max-w-screen-xl lg:mx-10 mx-auto flex items-center justify-between rounded-xl text-white p-4  border-collapse border nav-border    '>
+                <div className='max-w-screen-xl lg:mx-20 mx-auto flex items-center justify-between rounded-xl text-white p-4  border-collapse border nav-border    '>
                     
                     <Image
                         src={logo}
