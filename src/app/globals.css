@@ -40,7 +40,7 @@ border: 1px solid rgba(255, 215, 0, 1) ;
 }
 .curated-container{
   background-image: url("/cur.background.jpeg");
-  width: 1440px;
+  width: auto;
   height: 674px;
   background-size: cover;
 }
@@ -50,8 +50,31 @@ width: 1160px;
 height: 674px;
 background-size: cover;
 background-repeat: no-repeat;
-position: relative;
-left: 60px;
+
+
+}
+.goldentiers-contaier{
+  background-image: url('/golden-tiers.png');
+  background-color: black;
+  height: auto;
+  width: auto;
+  background-repeat: no-repeat;
+
+}
+.golden-tiers-card-1{
+  background-image: url('/Subtract-1.png');
+  
+
+}
+.golden-tiers-card-2{
+  background-image: url('/Subtract-2.png');
+
+
+}
+.footer-contener{
+  background-image: url('/footer-bg.png');
+ 
+  
 
 
 }
@@ -133,5 +156,20 @@ right: 250px;
 
 
 }
+.goldtier-text-res{
+
+  position: relative;
+  left: 35px;
+  margin-bottom: 40px;
+
+}
+.footer-contener{
+  background-image: url('/footer-res.png');
+ 
+  
+
+
+}
+
 
 }

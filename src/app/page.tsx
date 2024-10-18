@@ -1,4 +1,6 @@
 import CuratedCollection from '@/components/CuratedCollection'
+import Footer from '@/components/Footer'
+import GoldenTiers from '@/components/GoldenTiers'
 import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
 import OurMission from '@/components/OurMission'
@@ -12,6 +14,8 @@ const page = () => {
     <Hero/>
     <OurMission/>
     <CuratedCollection/>
+    <GoldenTiers/>
+    
     
     </>
   )

@@ -37,7 +37,7 @@ const CuratedCollection = () => {
 
     return (
         <div className='curated-container text-white mx-auto'>
-            <div className='blur-background p-10'>
+            <div className='blur-background  mx-auto p-10'>
                 <h1 className='font-[Chakra Petch] text-[34px] font-bold leading-[44.2px] tracking-[0.02em] text-left cur-text '>Curated Collection</h1>
                 <p className='font-[Inter] lg:text-[16px] font-normal leading-[24px] tracking-[0.04em] text-left cur-text lg:max-w-full max-w-sm '>Showing the curated selection of our top  Mintable NFTs.</p>
                 <div className="relative right-14 top-10 card-carosel lg:max-w-4xl  mx-auto ">
