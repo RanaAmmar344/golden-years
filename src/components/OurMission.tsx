@@ -45,7 +45,7 @@ const OurMission = () => {
            />
            <Image
            className=' lg:w-[154.33px] lg:h-[184.34px] relative bottom-[150px] w-[89.95px] h-[106.45px]'
-           src='/mission-4.png'
+           src='/duck-4.png'
            width={154.33}
            height={184.34}
            alt=''
