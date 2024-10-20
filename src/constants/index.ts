@@ -77,6 +77,69 @@ export const  CURATED_COLLECTION = [
     image: "/cur-10.png",
   }
 ];
+export const  COLLECTION_TWO = [
+  {
+    id: 1,
+    image: "/collection-grid-img-1.png",
+  },
+  
+  {
+    id: 2,
+    image: "/collection-grid-img-1.png",
+  },
+  
+  {
+    id: 3,
+    image: "/collection-grid-img-1.png",
+  },
+  
+  {
+    id: 4,
+    image: "/collection-grid-img-1.png",
+  },
+  
+  {
+    id: 5,
+    image: "/collection-grid-img-1.png",
+  },
+  
+  {
+    id: 6,
+    image: "/collection-grid-img-1.png",
+  },
+  
+  {
+    id: 7,
+    image: "/collection-grid-img-1.png",
+  },
+  
+  {
+    id: 8,
+    image: "/collection-grid-img-1.png",
+  },
+  
+  {
+    id: 9,
+    image: "/collection-grid-img-1.png",
+  },
+  
+  {
+    id: 10,
+    image: "/collection-grid-img-1.png",
+  },
+  
+  {
+    id: 11,
+    image: "/collection-grid-img-1.png",
+  },
+  
+  {
+    id: 12,
+    image: "/collection-grid-img-1.png",
+  },
+  
+
+];
 
 
 

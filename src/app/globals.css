@@ -91,6 +91,15 @@ background-repeat: no-repeat;
   background-image: url('/collection-subtract.png');
   background-position: 100%;
 }
+.tier-bg{
+  background-image: url('/tier-nav.png');
+
+
+}
+.tier-nav-2{
+  background-image: url('/tier-nav-2.png');
+}
+
 
 
 /* Mobile responsive Query */
