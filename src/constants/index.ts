@@ -140,6 +140,33 @@ export const  COLLECTION_TWO = [
   
 
 ];
+export const  ARTIST = [
+  {
+    id: 1,
+    image: "/artist.png",
+    name:"John Doe"
+  },
+  
+  {
+    id: 2,
+    image: "/artist.png",
+    name:"Mark Doe"
+  },
+  
+  {
+    id: 3,
+    image: "/artist.png",
+    name:"Williom De"
+  },
+  
+  {
+    id: 4,
+    image: "/artist.png",
+    name:"Addams ava"
+  },
+  
+
+];
 
 
 

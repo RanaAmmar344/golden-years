@@ -99,6 +99,14 @@ background-repeat: no-repeat;
 .tier-nav-2{
   background-image: url('/tier-nav-2.png');
 }
+.artist-container{
+  background-image: url('/artist-bg.png');
+  width: auto;
+  height: 595px;
+  background-size: cover;
+
+  
+}
 
 
 
@@ -196,6 +204,7 @@ right: 250px;
 
   background-position: 50%;
 }
+
 
 
 }

@@ -1,3 +1,4 @@
+import ArtistBehind from '@/components/ArtistBehind'
 import CollectionTwo from '@/components/CollectionTwo'
 import Navbar from '@/components/Navbar'
 import { Button } from '@/components/ui/button'
@@ -6,7 +7,8 @@ import React from 'react'
 
 const page = () => {
     return (
-        <div className='collection-container mx-auto bg-black  '>
+        <div className=' h-full w-full mx-auto bg-black '>
+            <div className='collection-container'>  
             <Navbar />
             <div className='flex  items-center justify-center flex-wrap text-white mt-28 '>
                 <div className=' space-y-4 p-4 lg:mx-0 mx-auto lg:mr-10 lg:my-0 my-20'>
@@ -106,7 +108,11 @@ const page = () => {
                 </div>
 
             </div>
+            </div>
+
+
             <CollectionTwo/>
+            <ArtistBehind/>
 
         </div>
     )
