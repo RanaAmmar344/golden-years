@@ -18,8 +18,8 @@ const Navbar = () => {
 
     return (
         <div className='w-full mx-auto flex items-center justify-center '>
-            <nav className='fixed top-2 z-50 lg:w-[1160px] w-full '>
-                <div className='max-w-screen-xl lg:mx-20 mx-auto flex items-center justify-between rounded-xl text-white p-4  border-collapse border nav-border    '>
+            <nav className='pt-4 z-50 w-[1160px] h-[65px] mx-auto '>
+                <div className='max-w-screen-xl lg:mx-10 mx-auto flex items-center justify-between rounded-xl text-white p-4  border-collapse border nav-border    '>
                     
                     <Image
                         src={logo}
@@ -27,7 +27,7 @@ const Navbar = () => {
                         height={43}
                         alt='Logo'
                     />
-                    <div className='hidden lg:flex items-center justify-center  px-2 '>
+                    <div className='hidden lg:flex items-center justify-center   '>
                         <ul className='flex items-center cursor-pointer gap-4 font-chakra-petch text-[16px] font-bold leading-[20.8px] text-left'>
                             <Link href='/'><li className='p-1  hover:text-yellow-400'>Home</li></Link>
                             <Link href='/collection'><li className='p-1  hover:text-yellow-400'>Collection</li></Link>
@@ -36,14 +36,14 @@ const Navbar = () => {
                         </ul>
                         
                     </div>
-                    <div className='hidden lg:flex items-center justify-center  '>
-                        <Image
-                        className=' cursor-pointer mr-2 '
-                        src='/wallet-btn.png'
-                        alt=''
-                         width={164}
-                         height={47}
-                        />
+                    <div className='hidden lg:flex items-center justify-center   '>
+                        
+                       <div className='mr-2 flex  w-[170px] h-[47px]  '>
+
+                    <Button className="custom-btn   "> </Button> 
+                       </div>
+                        
+
                        
                         <div className='flex mb-1 '>
                         <HiOutlineUser   className='border w-[41px] h-[41px] p-2 mr-3 nav-border-2 cursor-pointer hover:bg-[rgba(255,187,0,0.33)]  ' />
@@ -72,13 +72,10 @@ const Navbar = () => {
                            
                         </ul>
                         <div className=' flex flex-col items-center justify-center  '>
-                        <Image
-                        className=' cursor-pointer mr-2 '
-                        src='/wallet-btn.png'
-                        alt=''
-                         width={164}
-                         height={47}
-                        />
+                        <div className='mr-2 flex  w-[170px] h-[47px]  '>
+
+                    <Button className="custom-btn   "> </Button> 
+                       </div>
                        
                         <div className='flex flex-col text-center space-y-6 mt-6 '>
                         <p>Privacy Policy</p>

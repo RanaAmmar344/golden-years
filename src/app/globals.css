@@ -3,6 +3,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: black; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 222, 4, 1); /* Scrollbar thumb (yellow) */
+  border-radius: 10px;
+  border: 2px solid black; /* Adds padding around the thumb */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 222, 4, 1) black; /* Thumb color (yellow) and track color (#f1f1f1) */
+}
+
+
 
 
 
@@ -19,7 +41,7 @@ html, body {
   
   background-image: url('/hero-main-image.png');
   background-color: black;
-  width: 1440px;
+  width:auto;
   height: auto
   ;
   background-repeat: no-repeat;
@@ -73,6 +95,7 @@ background-repeat: no-repeat;
 }
 .footer-contener{
   background-image: url('/footer-bg.png');
+  background-repeat: no-repeat;
 
 
 }
@@ -107,28 +130,47 @@ background-repeat: no-repeat;
 
   
 }
+.custom-btn {
+  width: 170px; 
+  height: 50px; 
+ background-image: url('/btn-1.png');
+ cursor: pointer;
+ 
+}
+
+.custom-btn:hover {
+
+  background-image: url('/btn-2.png');
+  background-repeat: no-repeat;
+  width: 170px; 
+  height: 55px;
+ position: relative;
+ bottom: 8px;
+ left: 5px;
+  
+  
+ 
+  
+}
+
+
+
 
 
 
 /* Mobile responsive Query */
 
-@media (max-width: 500px) {
+@media (max-width: 640px) {
 
   .nav-border{
     margin: 20px;
-   border-radius: 0%;
-   border-top-left-radius: 40px;
-border-bottom-right-radius: 40px;
+   border-radius: 10px;
+ 
    
 
   } 
 
-  .nft-res{
-    position: relative;
-    top: 120px;
-    right: 15px;
-
-  }
+ 
 .carousel-res {
   position: relative;
   top: 150px;
@@ -138,16 +180,10 @@ right: 250px;
 .sold-res {
 
   position: relative;
-  left: 250px;
+  left: 265px;
   padding: 10px;
 }
-.hero-border-b{
-  position: relative;
-  top: 250px;
-  right: 50px;
 
-
-}
 .ourmisson-res{
   position: relative;
   top: 300px;
@@ -175,14 +211,14 @@ right: 250px;
 
   position: relative;
   
-  left: 12%;
+  left: 10%;
   top: 40px;
 
 }
 .arrow-r-res {
   position: relative;
   top: 40px;
-  left: 12%;
+  left: 10%;
 
 
 }

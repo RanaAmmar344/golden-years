@@ -1,59 +1,104 @@
-import React, { useState } from 'react';
+'use client';
+import { ARTIST } from '@/constants';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
 
-const images = [
-  "image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg",
-  "image6.jpg", "image7.jpg", "image8.jpg", "image9.jpg", "image10.jpg"
-];
-
-const Carousel = () => {
+const ArtistBehind = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const imagesPerRow = 5;
+  const [screenSize, setScreenSize] = useState('large'); // 'small', 'medium', or 'large'
 
-  const handleNext = () => {
-    if (currentIndex < images.length - imagesPerRow) {
-      setCurrentIndex(currentIndex + imagesPerRow);
-    }
-  };
+  useEffect(() => {
+    // Check for screen size
+    const updateScreenSize = () => {
+      const width = window.innerWidth;
+      if (width < 768) {
+        setScreenSize('small');
+      } else if (width >= 768 && width < 1024) {
+        setScreenSize('medium');
+      } else {
+        setScreenSize('large');
+      }
+    };
 
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - imagesPerRow);
+    updateScreenSize(); 
+    window.addEventListener('resize', updateScreenSize); 
+
+    return () => window.removeEventListener('resize', updateScreenSize);
+  }, []);
+
+  useEffect(() => {
+    if (screenSize === 'small') {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % ARTIST.length);
+      }, 3000);
+      return () => clearInterval(interval);
     }
+  }, [screenSize]);
+
+  // Number of items to show based on screen size
+  const itemsToShow = screenSize === 'large' ? 4 : screenSize === 'medium' ? 3 : 1;
+
+  // Calculate the transform based on the currentIndex
+  const containerTransform = {
+    transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)`,
   };
 
   return (
-    <div className="relative max-w-4xl mx-auto overflow-hidden">
-      <div className="flex flex-col space-y-4">
-        {/* Top Row */}
-        <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(currentIndex / imagesPerRow) * 100}%)` }}>
-          {images.slice(0, imagesPerRow).map((src, index) => (
-            <img key={index} src={src} alt={`Image ${index + 1}`} className="w-1/5 p-2" />
-          ))}
+    <div className='artist-container  mx-auto h-full  bg-cover bg-center text-white'>
+      <div className='flex items-center justify-center flex-col text-center pt-20'>
+        <div>
+          <h1 className='font-chakra lg:text-[46px] text-[34px] font-bold leading-[55.2px] tracking-[0.02em] text-center'>
+            Artist behind the art
+          </h1>
+          <p className='font-inter text-[14px] font-normal leading-[19.6px] tracking-[0.06em] text-center lg:max-w-lg max-w-sm'>
+            We have a brilliant team of artists who have shown their extra-ordinary work in these Golden NFTs collection.
+          </p>
         </div>
-        {/* Bottom Row */}
-        <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(currentIndex / imagesPerRow) * 100}%)` }}>
-          {images.slice(imagesPerRow).map((src, index) => (
-            <img key={index} src={src} alt={`Image ${index + imagesPerRow + 1}`} className="w-1/5 p-2" />
-          ))}
+
+        {/* Carousel */}
+        <div className="relative overflow-hidden mx-auto  w-full flex items-center justify-around ">
+          <div
+            className={`flex transition-transform duration-500   items-center justify-center   `}
+            style={containerTransform}
+          >
+            {ARTIST.map((item, index) => (
+              <div
+                key={index}
+                className={`flex-shrink-0 lg:w-[277px] lg:h-[299px]   bg-black text-white  m-2 p-4 rounded-xl `}
+                style={{ flexBasis: `${100 / itemsToShow}%` }}
+              >
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-[70%] object-cover rounded-xl"
+                />
+                <div className="p-2 text-center">
+                  <h3 className="text-lg font-bold">{item.name}</h3>
+                  <p className='font-inter text-[12px] font-normal leading-[18px] tracking-[0.06em] '>Graphic Designer</p>
+                  <div className='flex items-center justify-center mt-2'>
+                    <Image className='mr-4' src="/instagram-icon.png" width={18} height={20} alt="" />
+                    <Image src="/facebook-icon.png" width={18} height={20} alt="" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* Dots for small screens */}
+        {screenSize === 'small' && (
+          <div className="flex justify-center mt-4">
+            {ARTIST.map((_, index) => (
+              <div
+                key={index}
+                className={`h-2 w-2 mx-1 rounded-full ${currentIndex === index ? 'bg-white' : 'bg-yellow-500'}`}
+              ></div>
+            ))}
+          </div>
+        )}
       </div>
-      {/* Navigation Buttons */}
-      <button
-        onClick={handlePrev}
-        className="absolute top-4 right-16 bg-black text-white px-3 py-2 rounded-full opacity-75 hover:opacity-100 transition-opacity"
-        disabled={currentIndex === 0}
-      >
-        &#8249;
-      </button>
-      <button
-        onClick={handleNext}
-        className="absolute top-4 right-4 bg-black text-white px-3 py-2 rounded-full opacity-75 hover:opacity-100 transition-opacity"
-        disabled={currentIndex >= images.length - imagesPerRow}
-      >
-        &#8250;
-      </button>
     </div>
   );
 };
 
-export default Carousel;
+export default ArtistBehind;
