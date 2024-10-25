@@ -74,7 +74,7 @@ const Navbar = () => {
                         <div className=' flex flex-col items-center justify-center  '>
                         <div className='mr-2 flex  w-[170px] h-[47px]  '>
 
-                    <Button className="custom-btn   "> </Button> 
+                    <Button className="custom-btn "> </Button> 
                        </div>
                        
                         <div className='flex flex-col text-center space-y-6 mt-6 '>
