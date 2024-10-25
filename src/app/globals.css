@@ -137,6 +137,20 @@ background-repeat: no-repeat;
  cursor: pointer;
  
 }
+.custom-btn-2 {
+  width: 170px; 
+  height: 50px; 
+ background-image: url('/view-collection.png');
+ cursor: pointer;
+ 
+}
+.custom-btn-3 {
+  width: 170px; 
+  height: 50px; 
+ background-image: url('/connect-wallet.png');
+ cursor: pointer;
+ 
+}
 
 .custom-btn:hover {
 
@@ -152,10 +166,105 @@ background-repeat: no-repeat;
  
   
 }
+.custom-btn-2:hover {
+
+  background-image: url('/view-col.png');
+  background-repeat: no-repeat;
+  width: 170px; 
+  height: 55px;
+ position: relative;
+ bottom: 8px;
+ left: 5px;
+   
+}
+.custom-btn-3:hover {
+
+  background-image: url('/golden-col.png');
+  background-repeat: no-repeat;
+  width: 170px; 
+  height: 55px;
+ position: relative;
+ bottom: 8px;
+ left: 5px;
+   
+}
+/* -------------------------------------animated border------------------------------ */
+.animated-border {
+  position: relative;
+  border-top: 2px solid white;  
+  border-bottom: 2px solid white;
+}
+
+.animated-border::before,
+.animated-border::after {
+  content: '';
+  background-color: yellow;
+  position: absolute;
+  transition: all 0.10s ease-in-out;
+}
 
 
+.animated-border::before {
+  width: 2px;
+  height: 0;
+  top: 0;
+  left: 0;
+}
 
 
+.animated-border::after {
+  width: 2px;
+  height: 0;
+  bottom: 0;
+  right: 0;
+  transition-delay: 0.15s; 
+}
+
+
+.border-icon::before {
+  width: 0;
+  height: 2px;
+  top: 0;
+  left: 0;
+}
+
+.border-icon::after {
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+  transition-delay: 0.15s; 
+}
+
+/* Hover effects */
+.animated-border:hover::before {
+  height: 100%; 
+}
+
+.animated-border:hover::after {
+  height: 100%; 
+}
+
+.border-icon:hover::before {
+  width: 100%; 
+}
+
+.border-icon:hover::after {
+  width: 100%; 
+}
+
+
+.animated-border:hover {
+  border-top: 2px solid transparent;   
+  border-bottom: 2px solid transparent; 
+  transition: border-color 0.3s ease-in-out 0.15s; 
+}
+
+
+.border-icon {
+  position: relative;
+  transition: border-color 0.15s ease-in-out;
+}
 
 
 /* Mobile responsive Query */

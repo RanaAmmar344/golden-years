@@ -1,104 +1,75 @@
-'use client';
-import { ARTIST } from '@/constants';
-import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+.animated-border {
+  position: relative;
+  border-top: 2px solid white;  /* White top border */
+  border-bottom: 2px solid white; /* White bottom border */
+}
 
-const ArtistBehind = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [screenSize, setScreenSize] = useState('large'); // 'small', 'medium', or 'large'
+.animated-border::before,
+.animated-border::after {
+  content: '';
+  background-color: yellow;
+  position: absolute;
+  transition: all 0.10s ease-in-out;
+}
 
-  useEffect(() => {
-    // Check for screen size
-    const updateScreenSize = () => {
-      const width = window.innerWidth;
-      if (width < 768) {
-        setScreenSize('small');
-      } else if (width >= 768 && width < 1024) {
-        setScreenSize('medium');
-      } else {
-        setScreenSize('large');
-      }
-    };
+/* Top border (yellow on hover) */
+.animated-border::before {
+  width: 2px;
+  height: 0;
+  top: 0;
+  left: 0;
+}
 
-    updateScreenSize(); 
-    window.addEventListener('resize', updateScreenSize); 
+/* Bottom border (yellow on hover) */
+.animated-border::after {
+  width: 2px;
+  height: 0;
+  bottom: 0;
+  right: 0;
+  transition-delay: 0.15s; /* Delay for bottom border */
+}
 
-    return () => window.removeEventListener('resize', updateScreenSize);
-  }, []);
+/* Left border (yellow on hover) */
+.border-icon::before {
+  width: 0;
+  height: 2px;
+  top: 0;
+  left: 0;
+}
 
-  useEffect(() => {
-    if (screenSize === 'small') {
-      const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % ARTIST.length);
-      }, 3000);
-      return () => clearInterval(interval);
-    }
-  }, [screenSize]);
+/* Right border (yellow on hover) */
+.border-icon::after {
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+  transition-delay: 0.15s; /* Delay for right border */
+}
 
-  // Number of items to show based on screen size
-  const itemsToShow = screenSize === 'large' ? 4 : screenSize === 'medium' ? 3 : 1;
+/* Hover effects */
+.animated-border:hover::before {
+  height: 100%; /* Expand vertically for top border */
+}
 
-  // Calculate the transform based on the currentIndex
-  const containerTransform = {
-    transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)`,
-  };
+.animated-border:hover::after {
+  height: 100%; /* Expand vertically for bottom border */
+}
 
-  return (
-    <div className='artist-container  mx-auto h-full  bg-cover bg-center text-white'>
-      <div className='flex items-center justify-center flex-col text-center pt-20'>
-        <div>
-          <h1 className='font-chakra lg:text-[46px] text-[34px] font-bold leading-[55.2px] tracking-[0.02em] text-center'>
-            Artist behind the art
-          </h1>
-          <p className='font-inter text-[14px] font-normal leading-[19.6px] tracking-[0.06em] text-center lg:max-w-lg max-w-sm'>
-            We have a brilliant team of artists who have shown their extra-ordinary work in these Golden NFTs collection.
-          </p>
-        </div>
+.border-icon:hover::before {
+  width: 100%; /* Expand horizontally for left border */
+}
 
-        {/* Carousel */}
-        <div className="relative overflow-hidden mx-auto  w-full flex items-center justify-around ">
-          <div
-            className={`flex transition-transform duration-500   items-center justify-center   `}
-            style={containerTransform}
-          >
-            {ARTIST.map((item, index) => (
-              <div
-                key={index}
-                className={`flex-shrink-0 lg:w-[277px] lg:h-[299px]   bg-black text-white  m-2 p-4 rounded-xl `}
-                style={{ flexBasis: `${100 / itemsToShow}%` }}
-              >
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-full h-[70%] object-cover rounded-xl"
-                />
-                <div className="p-2 text-center">
-                  <h3 className="text-lg font-bold">{item.name}</h3>
-                  <p className='font-inter text-[12px] font-normal leading-[18px] tracking-[0.06em] '>Graphic Designer</p>
-                  <div className='flex items-center justify-center mt-2'>
-                    <Image className='mr-4' src="/instagram-icon.png" width={18} height={20} alt="" />
-                    <Image src="/facebook-icon.png" width={18} height={20} alt="" />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+.border-icon:hover::after {
+  width: 100%; /* Expand horizontally for right border */
+}
 
-        {/* Dots for small screens */}
-        {screenSize === 'small' && (
-          <div className="flex justify-center mt-4">
-            {ARTIST.map((_, index) => (
-              <div
-                key={index}
-                className={`h-2 w-2 mx-1 rounded-full ${currentIndex === index ? 'bg-white' : 'bg-yellow-500'}`}
-              ></div>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
+/* .border-icon styling */
+.border-icon {
+  position: relative;
+  transition: border-color 0.15s ease-in-out;
+}
 
-export default ArtistBehind;
+.animated-border:hover {
+  border-top: 2px solid yellow;   /* Change top border to yellow on hover */
+  border-bottom: 2px solid yellow; /* Change bottom border to yellow on hover */
+}

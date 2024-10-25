@@ -3,6 +3,7 @@ import { CURATED_COLLECTION } from '@/constants';
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
+import { Button } from './ui/button';
 
 const CuratedCollection = () => {
     const [currentTopIndex, setCurrentTopIndex] = useState(0);
@@ -31,7 +32,7 @@ const CuratedCollection = () => {
             if (currentTopIndex < imagesPerRow - 1) {
                 setCurrentTopIndex(currentTopIndex + 1);
             } else {
-                setCurrentTopIndex(0); 
+                setCurrentTopIndex(0);
                 setCurrentBottomIndex(currentBottomIndex + 1);
             }
         }
@@ -42,7 +43,7 @@ const CuratedCollection = () => {
             if (currentTopIndex > 0) {
                 setCurrentTopIndex(currentTopIndex - 1);
             } else {
-                setCurrentTopIndex(imagesPerRow - 1); 
+                setCurrentTopIndex(imagesPerRow - 1);
                 setCurrentBottomIndex(currentBottomIndex - 1);
             }
         }
@@ -67,7 +68,7 @@ const CuratedCollection = () => {
                             {/* Top row of images */}
                             <div className="flex transition-transform duration-300 ease-in-out justify-center md:space-x-4">
                                 {CURATED_COLLECTION.slice(currentTopIndex, currentTopIndex + imagesPerRow).map((src, index) => (
-                                    <img key={index} src={src.image} alt={`Image ${index + 1}`} 
+                                    <img key={index} src={src.image} alt={`Image ${index + 1}`}
                                         className="lg:w-[203px] lg:h-[192px] w-[170.31px] p-2 
                                             md:w-[203px] md:h-[192px] 
                                             sm:w-[190.31px] sm:h-[180px] 
@@ -78,7 +79,7 @@ const CuratedCollection = () => {
                             {/* Bottom row of images */}
                             <div className="flex transition-transform duration-300 ease-in-out justify-center md:space-x-4">
                                 {CURATED_COLLECTION.slice(currentBottomIndex, currentBottomIndex + imagesPerRow).map((src, index) => (
-                                    <img key={index} src={src.image} alt={`Image ${index + imagesPerRow + 1}`} 
+                                    <img key={index} src={src.image} alt={`Image ${index + imagesPerRow + 1}`}
                                         className="lg:w-[203px] lg:h-[192px] w-[170.31px] p-2 
                                             md:w-[203px] md:h-[192px] 
                                              sm:w-[190.31px] sm:h-[180px] 
@@ -106,12 +107,12 @@ const CuratedCollection = () => {
 
                     {/* View Collection button */}
                     <div className='flex items-center justify-center my-20 md:mt-14 relative lg:right-0 md:right-56'>
-                        <Image
-                            src='/view-collection.png'
-                            width={164}
-                            height={47}
-                            alt='View Collection'
-                        />
+
+                        <div className='  flex items-center justify-center  w-[170px] h-[47px] '>
+                         
+                            <Button className="custom-btn-2 mr-2  "> </Button>
+                        </div>
+
                     </div>
                 </div>
             </div>
