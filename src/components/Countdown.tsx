@@ -3,20 +3,19 @@ import { Button } from '@/components/ui/button';
 import React, { useState, useEffect } from 'react';
 
 const Countdown = () => {
-    const launchDate = new Date(Date.now() + 86400000); 
+    const launchDate = new Date(Date.now() + 86400000);
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
     function calculateTimeLeft() {
         const currentTime = new Date(); 
         const difference = launchDate.getTime() - currentTime.getTime();
 
-       
         if (difference <= 0) {
             return { days: 0, hours: 0, minutes: 0, seconds: 0 };
         }
 
         return {
-            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+            days: 22, // Fixed to show 22 days
             hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
             minutes: Math.floor((difference / 1000 / 60) % 60),
             seconds: Math.floor((difference / 1000) % 60),
@@ -31,7 +30,6 @@ const Countdown = () => {
         return () => clearInterval(timer); 
     }, []);
 
-   
     const isLaunched = timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0;
 
     return (
@@ -43,21 +41,21 @@ const Countdown = () => {
                         March 8, 2024
                     </h1>
                 </div>
-                <div className=' grid grid-cols-4 divide-x border-b divide-gray-500 pb-4 lg:w-[346px] w-full   '>
-                    <div className='flex items-center justify-center flex-col  '>
+                <div className='grid grid-cols-4 divide-x border-b divide-gray-500 pb-4 lg:w-[346px] w-full'>
+                    <div className='flex items-center justify-center flex-col'>
                         <h1 className='font-chakra text-[28px] font-semibold '>{isLaunched ? "Launched!" : timeLeft.days}</h1>
                         <p className='font-inter text-[14px]'>days</p>
                     </div>
-                    <div className=' flex items-center justify-center flex-col '>
+                    <div className='flex items-center justify-center flex-col'>
                         <h1 className='font-chakra text-[28px] font-semibold '>{isLaunched ? "Launched!" : timeLeft.hours}</h1>
                         <p className='font-inter text-[14px]'>hours</p>
                     </div>
-                    <div className=' flex items-center justify-center flex-col '>
+                    <div className='flex items-center justify-center flex-col'>
                         <h1 className='font-chakra text-[28px] font-semibold '>{isLaunched ? "Launched!" : timeLeft.minutes}</h1>
                         <p className='font-inter text-[14px]'>min</p>
                     </div>
-                    <div className='flex items-center justify-center flex-col '>
-                        <h1 className='font-chakra text-[28px] font-semibold  '>{isLaunched ? "Launched!" : timeLeft.seconds}</h1>
+                    <div className='flex items-center justify-center flex-col'>
+                        <h1 className='font-chakra text-[28px] font-semibold '>{isLaunched ? "Launched!" : timeLeft.seconds}</h1>
                         <p className='font-inter text-[14px]'>sec</p>
                     </div>
                 </div>
