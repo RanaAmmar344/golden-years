@@ -27,8 +27,8 @@ const page = () => {
         }
       };
   
-      updateScreenSize(); // Initial check
-      window.addEventListener('resize', updateScreenSize); // Update on resize
+      updateScreenSize(); 
+      window.addEventListener('resize', updateScreenSize); 
   
       return () => window.removeEventListener('resize', updateScreenSize);
     }, []);
@@ -42,10 +42,10 @@ const page = () => {
       }
     }, [screenSize]);
   
-    // Number of items to show based on screen size
+    
     const itemsToShow = screenSize === 'large' ? 4 : screenSize === 'medium' ? 3 : 1;
   
-    // Calculate the transform based on the currentIndex
+   
     const containerTransform = {
       transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)`,
     };
