@@ -22,7 +22,7 @@ const Navbar = () => {
                 <div className='max-w-screen-xl lg:mx-10 mx-auto flex items-center justify-between rounded-xl text-white p-4  border-collapse border nav-border    '>
                     
                     <Image
-                    className='lg:full w-[152.23px]'
+                    className='lg:w-[218.19px] w-[152.23px]'
                         src={logo}
                         width={218.19}
                         height={43}
