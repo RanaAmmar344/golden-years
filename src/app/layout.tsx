@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS CSS
+
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 const geistSans = localFont({
