@@ -8,21 +8,21 @@ import { Button } from './ui/button';
 const CuratedCollection = () => {
     const [currentTopIndex, setCurrentTopIndex] = useState(0);
     const [currentBottomIndex, setCurrentBottomIndex] = useState(0);
-    const [imagesPerRow, setImagesPerRow] = useState(5); // Default for large screens
+    const [imagesPerRow, setImagesPerRow] = useState(5); 
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth <= 640) {  // For screens <= 640px (small screens)
+            if (window.innerWidth <= 640) {  
                 setImagesPerRow(2);
-            } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {  // For md screens (768px - 1023px)
-                setImagesPerRow(3); // 3 images per row for md screens
+            } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {  
+                setImagesPerRow(3); 
             } else {
-                setImagesPerRow(5); // For larger screens
+                setImagesPerRow(5); 
             }
         };
 
         window.addEventListener('resize', handleResize);
-        handleResize(); // Set on initial render
+        handleResize(); 
 
         return () => window.removeEventListener('resize', handleResize);
     }, []);

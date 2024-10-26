@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import image1 from '../../../public/misson-1.png'
 import image5 from '../../../public/mission-5.png'
+import image6 from '../../../public/mission-6.png'
 
 
 import { Button } from '@/components/ui/button'
@@ -14,10 +15,10 @@ import Footer from '@/components/Footer';
 
 const page = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [screenSize, setScreenSize] = useState('large'); // 'small', 'medium', or 'large'
+    const [screenSize, setScreenSize] = useState('large'); 
   
     useEffect(() => {
-      // Check for screen size
+    
       const updateScreenSize = () => {
         const width = window.innerWidth;
         if (width < 768) {
@@ -61,13 +62,7 @@ const page = () => {
          
             <h1 className='font-chakra text-[46px] font-bold leading-[55.2px] tracking-[0.02em] text-center bg-gradient-to-r from-[#FFDE04] to-[#E7A316] text-transparent  bg-clip-text'>About Us</h1>
             <p className='lg:max-w-xl max-w-sm  px-4'>Let’s learn everything about Golden Year project. How it was themed and ideate. What steps we took, and how these golden NFTs come to life. Also learn the purpose of this project.</p>
-            {/* <Image
-                        className=' cursor-pointer my-20 '
-                        src='/connect-wallet.png'
-                        alt=''
-                         width={164}
-                         height={47}
-                        /> */}
+         
 
 <div className='  flex items-center justify-center my-20 w-[170px] h-[47px] '>
 
@@ -210,7 +205,7 @@ const page = () => {
            />
            <Image
            className=' '
-           src="/mission-6.png"
+           src={image6}
            width={154.33}
            height={184.34}
            alt=''
@@ -253,7 +248,7 @@ const page = () => {
            />
             <Image
            className=' '
-           src='/mission-6.png'
+           src={image6}
            width={154.33}
            height={184.34}
            alt=''

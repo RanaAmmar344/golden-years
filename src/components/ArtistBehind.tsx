@@ -6,10 +6,10 @@ import React, { useEffect, useState } from 'react';
 
 const ArtistBehind = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [screenSize, setScreenSize] = useState('large'); // 'small', 'medium', or 'large'
+  const [screenSize, setScreenSize] = useState('large'); 
 
   useEffect(() => {
-    // Check for screen size
+    
     const updateScreenSize = () => {
       const width = window.innerWidth;
       if (width < 768) {
@@ -21,8 +21,8 @@ const ArtistBehind = () => {
       }
     };
 
-    updateScreenSize(); // Initial check
-    window.addEventListener('resize', updateScreenSize); // Update on resize
+    updateScreenSize(); 
+    window.addEventListener('resize', updateScreenSize); 
 
     return () => window.removeEventListener('resize', updateScreenSize);
   }, []);
@@ -36,10 +36,10 @@ const ArtistBehind = () => {
     }
   }, [screenSize]);
 
-  // Number of items to show based on screen size
+ 
   const itemsToShow = screenSize === 'large' ? 4 : screenSize === 'medium' ? 3 : 1;
 
-  // Calculate the transform based on the currentIndex
+ 
   const containerTransform = {
     transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)`,
   };

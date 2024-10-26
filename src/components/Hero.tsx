@@ -61,12 +61,12 @@ const Hero = () => {
                   }`}
                 >
                   <div className="nav-border lg:w-[286.33px] lg:h-[342px] md:w-[250px] md:h-[300px] w-[256.79px] h-[307.25px] overflow-clip">
-                    {/* Mobile image size */}
+                   
                     <Image
                       src={item.image}
                       alt=""
-                      width={256.79} /* Mobile width */
-                      height={307.25} /* Mobile height */
+                      width={256.79} 
+                      height={307.25} 
                       className="object-cover h-full w-full"
                     />
                   </div>

@@ -9,19 +9,19 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: black; /* Background of the scrollbar track */
+  background: black; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 222, 4, 1); /* Scrollbar thumb (yellow) */
+  background-color: rgba(255, 222, 4, 1); 
   border-radius: 10px;
-  border: 2px solid black; /* Adds padding around the thumb */
+  border: 2px solid black; 
 }
 
-/* For Firefox */
+
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 222, 4, 1) black; /* Thumb color (yellow) and track color (#f1f1f1) */
+  scrollbar-color: rgba(255, 222, 4, 1) black; 
 }
 
 
@@ -277,8 +277,8 @@ background-repeat: no-repeat;
 
 .animate-slide {
   display: flex;
-  animation: slide 10s linear infinite; /* Adjust duration as needed */
-  white-space: nowrap; /* Prevent wrapping of images */
+  animation: slide 10s linear infinite; 
+  white-space: nowrap; 
 }
 
 
