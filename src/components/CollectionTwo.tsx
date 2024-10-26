@@ -43,7 +43,7 @@ const CollectionTwo = () => {
 
        {/* --------------------------------grid---------------------------- */}
 
-       <div className='grid grid-cols-2 lg:grid-cols-4 gap-4  mx-auto '>
+       <div className='grid grid-cols-2 lg:grid-cols-4 gap-4  mx-auto 'data-aos="zoom-in-down">
   {COLLECTION_TWO.map((item, index) => (
     <div key={index} className='border rounded-xl lg:w-[278px] lg:h-[333px] w-[183px] h-[260px] cursor-pointer mt-10 '>
       <div>

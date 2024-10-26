@@ -12,7 +12,7 @@ const Page = () => {
 
     return (
         <div className='h-full w-full mx-auto bg-black  scroll-smooth '>
-            <div className='collection-container'>
+            <div className='collection-container'data-aos="fade-left">
                 <Navbar />
                 <div className='flex items-center justify-center flex-wrap text-white mt-20 '>
                     <div className='space-y-4 p-4 lg:mx-0 mx-auto lg:mr-10 lg:my-0 my-20'>

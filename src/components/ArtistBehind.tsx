@@ -47,7 +47,7 @@ const ArtistBehind = () => {
   return (
   
     <div className='artist-container  mx-auto bg-cover bg-center text-white'>
-      <div className='flex items-center justify-center flex-col text-center pt-20'>
+      <div className='flex items-center justify-center flex-col text-center pt-20' data-aos="zoom-in-up">
         <div>
           <h1 className='font-chakra lg:text-[46px] text-[34px] font-bold leading-[55.2px] tracking-[0.02em] text-center'>
             Artist behind the art

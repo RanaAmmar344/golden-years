@@ -22,6 +22,7 @@ const Navbar = () => {
                 <div className='max-w-screen-xl lg:mx-10 mx-auto flex items-center justify-between rounded-xl text-white p-4  border-collapse border nav-border    '>
                     
                     <Image
+                    className='lg:full w-[152.23px]'
                         src={logo}
                         width={218.19}
                         height={43}
@@ -55,11 +56,19 @@ const Navbar = () => {
 
                     </div>
                   
-                    <div className='flex justify-end  md:flex lg:hidden '>
-                    <CgShoppingBag  className='border  p-1.5 w-full h-full nav-border-2 cursor-pointer relative top-1.5 left-1  hover:bg-[rgba(255,187,0,0.33)]' />
-                        <Button   onClick={toggleNavbar}>{mobileDrawerOpen ? <X /> : <Menu />}</Button>
+                    <div className='flex justify-end md:flex lg:hidden'>
+    <div className='flex items-center mr-2'>
+        <CgShoppingBag className='border p-1.5 w-[41px] h-[41px] nav-border-2 cursor-pointer hover:bg-[rgba(255,187,0,0.33)]' />
+        
+    </div>
+    <Button
+        onClick={toggleNavbar}
+        className='border p-1.5 w-[41px] h-[41px] nav-border-2 flex items-center justify-center '
+    >
+        {mobileDrawerOpen ? <X /> : <Menu />}
+    </Button>
+</div>
 
-                    </div>
                 </div>
                 
 

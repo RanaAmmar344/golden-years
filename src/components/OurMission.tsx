@@ -7,9 +7,8 @@ import { Button } from './ui/button'
 
 const OurMission = () => {
   return (
-    <div className='ourmission-container mx-auto w-full text-white bg-black lg:h-[800px]  overflow-hidden
- '>
-        <div className='ourmisson-res'>
+    <div className='ourmission-container mx-auto w-full text-white bg-black lg:h-[800px]  overflow-hidden' >
+        <div className='ourmisson-res' data-aos="fade-up">
            <div className='text-center flex flex-col items-center justify-center'>
             <h1 className='font-chakra text-[22px] font-semibold leading-[28.6px] tracking-[0.01em] text-center'>Golden words</h1>
             <h1 className='font-chakra text-[46px] font-bold leading-[55.2px] tracking-[0.02em] text-center bg-gradient-to-r from-[#FFDE04] to-[#E7A316] text-transparent  bg-clip-text'>Our Mission</h1>

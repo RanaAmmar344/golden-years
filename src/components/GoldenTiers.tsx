@@ -6,7 +6,7 @@ import { Button } from './ui/button'
 const GoldenTiers = () => {
   return (
     <div className='goldentiers-contaier mx-auto overflow-hidden  '>
-      <div className='contienr mx-auto flex items-center justify-around flex-wrap py-28 w-full'>
+      <div className='contienr mx-auto flex items-center justify-around flex-wrap py-28 w-full' data-aos="fade-up">
         <div className='text-white space-y-4 goldtier-text-res '>
           <h1 className='font-[Chakra Petch] text-[34px] font-bold leading-[44.2px] tracking-[0.02em] text-left bg-clip-text text-transparent bg-gradient-to-r from-[#FFDE04] to-[#E7A316]'>5 Golden Tiers </h1>
           <p className='font-inter text-base font-normal leading-6 tracking-[0.04em] lg:text-left lg:max-w-md max-w-xs'>We created a small batch of different options to keep a low circulation of art for a stronger profit margin towards your initial investment. We could have made over 10,000 units, but why over-saturate the rarity of these beauties?</p>
@@ -25,7 +25,7 @@ const GoldenTiers = () => {
         </div>
 
       </div>
-      <div className='container mx-auto flex items-center justify-center flex-wrap md:space-x-2    '>
+      <div className='container mx-auto flex items-center justify-center flex-wrap md:space-x-2    ' data-aos="flip-up">
         <div className=' w-[376.36px] h-[227px] lg:w-[572px] lg:h-[345px] bg-cover bg-center text-white lg:space-y-8 space-y-2 p-8 lg:mr-4 golden-tiers-card-2  '>
           <h1 className='font-chakra-petch lg:text-[34px] text-[22px] font-bold lg:leading-[44.2px] tracking-[0.02em]'>Subscribe For The Latest Updates!</h1>
           <p className='font-inter text-[14px] font-normal leading-[19.6px] tracking-[0.06em] text-left'>Lets keep in touch with us by subscribing to our newsletter. Stay up-to-date.</p>
@@ -49,24 +49,24 @@ const GoldenTiers = () => {
 
           <div className="mt-20 ">
 
-            <div className="flex items-center justify-between  lg:my-16">
-            <div className="w-24 h-full animated-border flex items-center justify-center relative">
-  <span className="border-icon w-full flex items-center justify-center overflow-hidden">
+            <div className="flex items-center justify-between lg:space-x-0 space-x-4  lg:my-16">
+            <div className="w-24 h-full animated-border ">
+  <span className="border-icon w-full flex items-center justify-center ">
     <Image className="py-8" src="/discord-icon.png" width={38} height={30} alt="" />
   </span>
 </div>
-            <div className="w-24 h-full animated-border flex items-center justify-center relative">
-  <span className="border-icon w-full flex items-center justify-center overflow-hidden">
-    <Image className="py-7" src="/instagram-icon.png" width={38} height={30} alt="" />
+            <div className="w-24 h-full animated-border ">
+  <span className="border-icon w-full flex items-center justify-center ">
+    <Image className="py-7 " src="/instagram-icon.png" width={38} height={30} alt="" />
   </span>
 </div>
-            <div className="w-24 h-full animated-border flex items-center justify-center relative">
-  <span className="border-icon w-full flex items-center justify-center overflow-hidden">
-    <Image className="py-7" src="/twiter-icon.png" width={38} height={30} alt="" />
+            <div className="w-24 h-full animated-border ">
+  <span className="border-icon w-full flex items-center justify-center ">
+    <Image className="py-8" src="/twiter-icon.png" width={38} height={30} alt="" />
   </span>
 </div>
-            <div className="w-24 h-full animated-border flex items-center justify-center relative">
-  <span className="border-icon w-full flex items-center justify-center overflow-hidden">
+            <div className="w-24 h-full animated-border ">
+  <span className="border-icon w-full flex items-center justify-center ">
     <Image className="py-7" src="/facebook-icon.png" width={38} height={30} alt="" />
   </span>
 </div>

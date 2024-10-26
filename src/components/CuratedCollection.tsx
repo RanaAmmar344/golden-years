@@ -51,7 +51,7 @@ const CuratedCollection = () => {
 
     return (
         <div className='curated-container text-white mx-auto'>
-            <div className='blur-background mx-auto  w-[434px] '>
+            <div className='blur-background mx-auto  w-[434px]  ' >
                 <div className='relative lg:left-0 left-4  mx-auto w-full'>
                     <div className='relative lg:left-14 left-10 pt-20'>
                         <h1 className='font-[Chakra Petch] lg:text-[34px] text-[30px] font-bold leading-[44.2px] tracking-[0.02em] text-left cur-text'>
@@ -63,7 +63,7 @@ const CuratedCollection = () => {
                     </div>
 
                     {/* Images Section */}
-                    <div className="relative lg:right-0 top-10 md:mx-auto your-class-2    m-auto md:right-56 lg:max-w-4xl mx-auto w-full ">
+                    <div className="relative lg:right-0 top-10 md:mx-auto your-class-2    m-auto md:right-56 lg:max-w-4xl mx-auto w-full " data-aos="zoom-in">
                         <div className="flex flex-col mx-auto w-full   items-start justify-center md:items-center ">
                             {/* Top row of images */}
                             <div className="flex transition-transform duration-300 ease-in-out justify-center md:space-x-4">

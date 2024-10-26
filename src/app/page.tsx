@@ -1,13 +1,22 @@
+"use client"
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 import CuratedCollection from '@/components/CuratedCollection'
-import Footer from '@/components/Footer'
 import GoldenTiers from '@/components/GoldenTiers'
 import Hero from '@/components/Hero'
-import Navbar from '@/components/Navbar'
 import OurMission from '@/components/OurMission'
 import React from 'react'
 
 
+
 const page = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: false, 
+    });
+  }, []); 
   return (
     <>
    

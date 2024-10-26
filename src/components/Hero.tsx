@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <div className="hero-container mx-auto flex items-center justify-center flex-col pb-40">
       <Navbar/>
-      <div className="flex flex-wrap  mx-auto w-full">
+      <div className="flex flex-wrap  mx-auto w-full "  data-aos="fade-left">
         {/* Section 1 */}
         <div className="nav-border text-white  md:w-[600px] md:h-[400px] lg:w-[376px] lg:h-[505px] w-[90%] h-[475px] relative top-[90px] lg:left-[130px] md:left-[100px]  lg:p-10 p-6 bg-gradient-to-br from-[#373737] via-[#0D0D0D] to-[#0D0D0D]">
           <h1 className="font-chakra-petch text-[48px] md:text-[40px] lg:text-[58px] font-bold leading-[63.8px] tracking-[0.02em] text-left bg-gradient-to-r from-[#FFDE04] via-[#EBA20B] to-[#FFDE04] bg-clip-text text-transparent mt-4">

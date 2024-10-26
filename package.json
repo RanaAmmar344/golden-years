@@ -12,6 +12,7 @@
     "@next/font": "^14.2.15",
     "@radix-ui/react-slot": "^1.1.0",
     "@react-icons/all-files": "^4.1.0",
+    "aos": "^2.3.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.453.0",
