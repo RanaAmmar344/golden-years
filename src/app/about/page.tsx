@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import image1 from '../../../public/misson-1.png'
 import image5 from '../../../public/mission-5.png'
-import image6 from '../../../public/mission-6.png'
+
 
 
 import { Button } from '@/components/ui/button'
@@ -205,7 +205,7 @@ const page = () => {
            />
            <Image
            className=' '
-           src={image6}
+           src='/mis-6.png'
            width={154.33}
            height={184.34}
            alt=''
@@ -248,7 +248,7 @@ const page = () => {
            />
             <Image
            className=' '
-           src={image6}
+           src='/mis-6.png'
            width={154.33}
            height={184.34}
            alt=''
